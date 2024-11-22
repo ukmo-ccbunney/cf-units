@@ -87,6 +87,18 @@ repos:
     -   id: sort-all
         types: [file, python]
 
+-   repo: https://github.com/pappasam/toml-sort
+    rev: v0.24.2
+    hooks:
+    -   id: toml-sort-fix
+        args: [
+            "--sort-table-keys",
+            "--in-place",
+            "--spaces-before-inline-comment=2",
+            "--spaces-indent-inline-array=4",
+            "--trailing-comma-inline-array"
+        ]
+
 -   repo: https://github.com/scientific-python/cookie
     rev: 2024.08.19
     hooks:
